@@ -3,8 +3,8 @@
 
 </style></head><body><main class="wrap"><header><div><h1>Invigilator Deputation System</h1><p>Administrator workspace</p></div><button id="refresh">Refresh</button></header><section id="auth" class="panel"><h2>Administrator sign-in</h2><p>Enter administrator email and password.</p><form id="loginform"><div class="formgrid"><label>Administrator email<input id="adminemail" type="email" value="dio-spl@nic.in" required autocomplete="username"></label><label>Password<input id="adminpassword" type="password" required autocomplete="current-password"></label></div><div class="toolbar"><button type="submit">Sign in</button></div></form><p id="authmsg" class="status"></p></section><section id="app" hidden><nav id="tabs"></nav><div id="content"></div></section><footer>Invigilator Deputation System · Private administrator application</footer></main><script>
 // Set this to the deployed Apps Script Web App URL ending in /exec.
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbw2FClxFvUlZGg6UiFe0K_FPJiFMU8Oj8Rt5eSWMNgvobXmDr0UWuPM_yGMbly1EEMZdg/exec';
-// Create a Google OAuth 2.0 Web client ID (Google Cloud Console) and paste it here.
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbxyUoRT4oaa6vKGVQGoVht9t2-Q8TIFvJYUMq00dcQiJaRXypC-Mi25Uu-5Ery9Z0r4yQ/exec';
+// Email/password authentication is handled by the Apps Script backend.
 let session='';
 const tables={Centres:['Centre Code','Centre Name','Centre Address','Block','Sub Division','District','Required Capacity'],Exams:['Exam Name','Exam Date','Exam From Date','Exam To Date','Exam Time','Exam Shift','Exam Joining Time','Reporting Date','Reporting Time','Exam Office Name','Exam Officer Name','Reserve Option','Party Gender Constraint','Duty Option'],Invigilators:['Pin Number','Name','Designation','Sex','Mobile Number','Office Name','Office Address','Office Code','Posting Block']};
 let state={data:null,table:'Centres'};
